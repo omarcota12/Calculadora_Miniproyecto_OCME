@@ -5,7 +5,7 @@
 
             <StackLayout Padding="20">
         <Label>Nombre: omar cota medina</Label>
-        <!-- Pantalla para mostrar el resultado -->
+        
         <Entry x:Name="entrada" 
                HorizontalOptions="FillAndExpand" 
                VerticalOptions="CenterAndExpand" 
@@ -14,7 +14,7 @@
                IsReadOnly="True" 
                HorizontalTextAlignment="End" />
 
-        <!-- Filas de botones -->
+        
         <Grid Padding="5,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!-- Botones de números y operaciones -->
+            
             <Button Text="7" Grid.Row="0" Grid.Column="0" Clicked="Activar" />
             <Button Text="8" Grid.Row="0" Grid.Column="1" Clicked="Activar" />
             <Button Text="9" Grid.Row="0" Grid.Column="2" Clicked="Activar" />
