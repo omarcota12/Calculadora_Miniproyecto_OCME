@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calcular_OCME.MainPage"
+             xmlns:viewmodels="clr-namespace:Calcular_OCME.ModelView"
+             BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CalculadoraViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <!-- Display de la calculadora -->
+        <Label Text="{Binding Display}"
+               FontSize="48"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+       
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            
+            <Button Text="1" Command="{Binding NumeroCommand}" CommandParameter="1" />
+            <Button Text="2" Command="{Binding NumeroCommand}" CommandParameter="2" />
+            <Button Text="3" Command="{Binding NumeroCommand}" CommandParameter="3" />
+            <Button Text="+" Command="{Binding OperacionCommand}" CommandParameter="+" />
+
+            <Button Text="4" Command="{Binding NumeroCommand}" CommandParameter="4" />
+            <Button Text="5" Command="{Binding NumeroCommand}" CommandParameter="5" />
+            <Button Text="6" Command="{Binding NumeroCommand}" CommandParameter="6" />
+            <Button Text="-" Command="{Binding OperacionCommand}" CommandParameter="-" />
+
+            <Button Text="7" Command="{Binding NumeroCommand}" CommandParameter="7" />
+            <Button Text="8" Command="{Binding NumeroCommand}" CommandParameter="8" />
+            <Button Text="9" Command="{Binding NumeroCommand}" CommandParameter="9" />
+            <Button Text="*" Command="{Binding OperacionCommand}" CommandParameter="*" />
+
+            <Button Text="C" Command="{Binding LimpiarCommand}" />
+            <Button Text="0" Command="{Binding NumeroCommand}" CommandParameter="0" />
+            <Button Text="/" Command="{Binding OperacionCommand}" CommandParameter="/" />
+            <Button Text="=" Command="{Binding CalcularCommand}" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
